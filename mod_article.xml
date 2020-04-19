@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.9" client="administrator" method="upgrade">
+	<name>mod_article</name>
+	<author>Thomas Hunziker</author>
+	<creationDate>March 2020</creationDate>
+	<copyright>Copyright (C) 2020 Thomas Hunziker</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>admin@bakual.net</authorEmail>
+	<authorUrl>www.bakual.net</authorUrl>
+	<version>1.0.0</version>
+	<description>Modul um einen Artikel anzuzeigen</description>
+	<files>
+		<filename module="mod_article">mod_article.php</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="id"
+					type="number"
+					label="Article ID"
+					filter="integer"
+				/>
+			</fieldset>
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC"
+				/>
+
+				<field
+					name="moduleclass_sfx"
+					type="textarea"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+					rows="3"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
